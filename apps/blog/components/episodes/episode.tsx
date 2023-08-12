@@ -1,25 +1,26 @@
+import * as React from 'react'
 import { useEffect, useState } from 'react'
-import React from "react"
 import axios from 'axios'
 import he from 'he' 
 import { Img } from 'react-image'
+import { Box, Divider, Stack, Typography } from '@mui/material'
 
 import './episodes.module.css'
-import { Box, Divider, Stack, Typography } from '@mui/material';
+
 
 interface Props {
     episode: Episode
 }
 export function Episode({ episode } : Props) {
-    const [featureMedia, setFeatureMedia] = useState<string>('');
+    const [featureMedia, setFeatureMedia] = useState<string>('')
 
     const getImage = () => {
         axios
             .get(episode.featureMedia)
             .then((response) => {
                 setFeatureMedia(response.data.source_url)
-            });
-    };
+            })
+    }
 
     useEffect(() => {
         getImage()
@@ -59,5 +60,5 @@ export function Episode({ episode } : Props) {
             </Stack>
             <Divider />
         </>
-    );
+    )
 }

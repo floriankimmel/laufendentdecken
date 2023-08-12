@@ -1,3 +1,2 @@
-export { Episode }  from "./episode";
-export { useFetchEpisodes } from "./useFetchEpisodes";
+export { Episode }  from './episode'
 
