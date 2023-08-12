@@ -11,9 +11,7 @@ export default function App() {
         <Stack sx={{ width: '100%' }}>
             <Stack sx={{ width: '700px', margin: '0 auto' }}>
                 <Stack justifyContent="space-between" direction="column" gap={4}>
-                    {episodes.map((item: Episode) => (
-                        <Episode episode={item} key={item.id} />
-                    ))}
+                    {episodes.map((item: Episode) => (<Episode episode={item} key={item.id}/>))}
                 </Stack>
             </Stack>
         </Stack>
