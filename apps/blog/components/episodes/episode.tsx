@@ -10,7 +10,7 @@ import { Box, Divider, Stack, Typography } from '@mui/material';
 interface Props {
     episode: Episode
 }
-export default function Episode({ episode } : Props) {
+export function Episode({ episode } : Props) {
     const [featureMedia, setFeatureMedia] = useState<string>('');
 
     const getImage = () => {

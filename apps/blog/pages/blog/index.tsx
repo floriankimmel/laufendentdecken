@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { useFetchEpisodes } from './hooks/useFetchEpisodes';
-import Episode from './components/episodes/episode';
+import { Episode, useFetchEpisodes } from '../../components/episodes';
 import { Stack } from '@mui/material';
 
 export default function App() {
